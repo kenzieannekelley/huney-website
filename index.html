@@ -3,118 +3,338 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Huney | Household planning around your real calendar</title>
+    <title>Huney | The shared plan for home</title>
     <meta
       name="description"
-      content="Huney builds your household task list, then plans cleaning, meals, car care, and maintenance around your real calendar."
+      content="Huney helps households turn real life into a shared plan for cleaning, meals, maintenance, pets, cars, health routines, and the work that keeps a home going."
     >
-    <link rel="icon" href="/assets/huney-app-icon.png">
-    <link rel="apple-touch-icon" href="/assets/huney-app-icon.png">
+    <link rel="icon" href="assets/huney-app-icon.png">
+    <link rel="apple-touch-icon" href="assets/huney-app-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arbutus+Slab&family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/styles.css">
+    <link rel="stylesheet" href="assets/styles.css">
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="/" aria-label="Huney home">
-        <img class="brand-logo" src="/assets/huney-wordmark.png" alt="Huney">
+    <header class="site-header glass-header">
+      <a class="brand" href="./" aria-label="Huney home">
+        <img class="brand-icon" src="assets/huney-app-icon.png" alt="" aria-hidden="true">
+        <img class="brand-logo" src="assets/huney-wordmark.png" alt="Huney">
       </a>
       <nav class="site-nav" aria-label="Main navigation">
-        <a href="/support/">Support</a>
-        <a href="/privacy/">Privacy</a>
+        <a href="#what">What it is</a>
+        <a href="#who">Who it is for</a>
+        <a href="#how">How it works</a>
+        <a href="support/">Support</a>
       </nav>
     </header>
 
     <main>
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">Household planning, without the blank-list problem</p>
-          <h1>Run your household from one place.</h1>
+      <section class="image-hero">
+        <div class="hero-backdrop" aria-hidden="true">
+          <div class="hero-house-scene">
+            <span class="house-arch"></span>
+            <span class="house-floor"></span>
+          </div>
+        </div>
+        <div class="hero-atmosphere" aria-hidden="true">
+          <span class="task-float icon-cleaning">
+            <svg viewBox="0 0 48 48" role="img"><path d="M24 4l3.6 12.4L40 20l-12.4 3.6L24 36l-3.6-12.4L8 20l12.4-3.6L24 4z"/><path d="M10 29l1.8 6.2L18 37l-6.2 1.8L10 45l-1.8-6.2L2 37l6.2-1.8L10 29z"/><path d="M38 31l1.4 4.6L44 37l-4.6 1.4L38 43l-1.4-4.6L32 37l4.6-1.4L38 31z"/></svg>
+          </span>
+          <span class="task-float icon-laundry">
+            <svg viewBox="0 0 48 48" role="img"><rect x="9" y="4" width="30" height="40" rx="7"/><path d="M15 11h7"/><circle cx="24" cy="28" r="10"/><path d="M16 28c4-5 8 5 16 0"/></svg>
+          </span>
+          <span class="task-float icon-kitchen">
+            <svg viewBox="0 0 48 48" role="img"><path d="M7 27h24a10 10 0 0 1-10 10h-4A10 10 0 0 1 7 27z"/><path d="M31 27h8a4 4 0 0 1 0 8h-7"/><path d="M15 20V8"/><path d="M23 20V8"/><path d="M31 20V8"/></svg>
+          </span>
+          <span class="task-float icon-pets">
+            <svg viewBox="0 0 48 48" role="img"><path d="M14 21c-3 0-5-3-5-7s2-7 5-7 5 3 5 7-2 7-5 7z"/><path d="M34 21c-3 0-5-3-5-7s2-7 5-7 5 3 5 7-2 7-5 7z"/><path d="M24 19c-3 0-5-3-5-7s2-7 5-7 5 3 5 7-2 7-5 7z"/><path d="M15 36c0-7 5-13 9-13s9 6 9 13c0 4-4 6-9 4-5 2-9 0-9-4z"/></svg>
+          </span>
+          <span class="task-float icon-groceries">
+            <svg viewBox="0 0 48 48" role="img"><path d="M7 10h5l5 22h18l5-15H15"/><circle cx="20" cy="39" r="3"/><circle cx="34" cy="39" r="3"/></svg>
+          </span>
+          <span class="task-float icon-health">
+            <svg viewBox="0 0 48 48" role="img"><rect x="8" y="8" width="32" height="32" rx="8"/><path d="M24 16v16"/><path d="M16 24h16"/><path d="M16 35h16"/></svg>
+          </span>
+          <span class="task-float icon-maintenance">
+            <svg viewBox="0 0 48 48" role="img"><path d="M30 6l12 12-7 7-12-12 7-7z"/><path d="M25 18L8 35l5 5 17-17"/><path d="M35 13l-5 5"/></svg>
+          </span>
+          <span class="task-float icon-cars">
+            <svg viewBox="0 0 48 48" role="img"><path d="M10 28l4-12h20l4 12"/><rect x="7" y="25" width="34" height="12" rx="5"/><circle cx="16" cy="37" r="3"/><circle cx="32" cy="37" r="3"/><path d="M14 16l-3-4"/><path d="M34 16l3-4"/></svg>
+          </span>
+        </div>
+        <div class="image-hero-copy">
+          <p class="eyebrow">Household planning that starts with real life</p>
+          <h1>Home feels lighter when the plan is shared.</h1>
           <p class="hero-lede">
-            Huney builds your task list, then plans cleaning, meals, car care, and
-            maintenance around your real calendar.
+            Huney helps couples, families, roommates, and busy households turn
+            the invisible work of home into a shared plan for cleaning, meals,
+            maintenance, pets, cars, and the little routines that keep life moving.
           </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#start">Build my household plan</a>
-            <a class="button secondary" href="/support/">Get support</a>
-          </div>
-        </div>
-
-        <div class="phone-preview welcome-preview" aria-label="Huney welcome screen preview">
-          <img src="/assets/huney-welcome-screen.png" alt="Huney welcome screen">
-        </div>
-      </section>
-
-      <section class="section" id="start">
-        <div class="section-heading">
-          <p class="eyebrow">Start with your home</p>
-          <h2>Huney turns intake into a household plan.</h2>
-          <p>
-            Tell Huney about your home type, bedrooms, bathrooms, kids, partner,
-            pets, cars, and routines. Huney creates a starting task list built
-            around the home you actually live in.
-          </p>
-        </div>
-        <div class="feature-grid">
-          <article class="feature-card">
-            <span class="mini-icon">01</span>
-            <h3>Take the intake quiz</h3>
-            <p>Set up the shape of your household before you ever build a task.</p>
-          </article>
-          <article class="feature-card">
-            <span class="mini-icon">02</span>
-            <h3>Connect your calendar</h3>
-            <p>Plan chores and routines around real events, meetings, and family time.</p>
-          </article>
-          <article class="feature-card">
-            <span class="mini-icon">03</span>
-            <h3>Keep everyone aligned</h3>
-            <p>Assign, rotate, complete, and share tasks with the whole household.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="band">
-        <div class="band-copy">
-          <p class="eyebrow">Meals that meet the calendar</p>
-          <h2>Drop in a recipe link. Cook when it is time.</h2>
-          <p>
-            Add recipes from links, publish meals to your calendar, and use cooking
-            mode when dinner prep starts. Huney keeps ingredients, instructions,
-            and timers together so you can keep moving.
-          </p>
-        </div>
-        <div class="recipe-panel" aria-label="Recipe preview">
-          <div class="recipe-url">recipe link added</div>
-          <h3>Sheet Pan Lemon Chicken</h3>
-          <div class="recipe-steps">
-            <span>Ingredients organized</span>
-            <span>Steps ready</span>
-            <span>Timer queued</span>
-            <span>Published to calendar</span>
-          </div>
-          <div class="cook-mode">
-            <strong>Cooking mode</strong>
-            <p>Step 3 of 7 - 12 min timer</p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button primary" href="#how">See how it works</a>
           </div>
         </div>
       </section>
 
-      <section class="section compact">
-        <div class="section-heading">
-          <p class="eyebrow">Built for the real week</p>
-          <h2>Cleaning, meals, car care, maintenance, and the tiny things that add up.</h2>
-        </div>
-        <div class="pill-list" aria-label="Huney planning categories">
+      <section class="motion-rail" aria-label="Huney feature highlights">
+        <div class="rail-track">
           <span>Cleaning</span>
-          <span>Maintenance</span>
           <span>Meals</span>
-          <span>Recipes</span>
+          <span>Pets</span>
           <span>Car care</span>
+          <span>Health routines</span>
           <span>Shared calendars</span>
-          <span>Reminders</span>
+          <span>Maintenance</span>
           <span>Weekly goals</span>
+          <span>Cleaning</span>
+          <span>Meals</span>
+          <span>Pets</span>
+          <span>Car care</span>
+          <span>Health routines</span>
+          <span>Shared calendars</span>
+          <span>Maintenance</span>
+          <span>Weekly goals</span>
+        </div>
+      </section>
+
+      <section class="intro-strip" aria-label="Huney product pillars">
+        <article>
+          <span class="pillar-icon">01</span>
+          <h2>Built from your home</h2>
+          <p>Start with an intake that reflects the home you actually live in.</p>
+        </article>
+        <article>
+          <span class="pillar-icon">02</span>
+          <h2>Shared by default</h2>
+          <p>Assign, rotate, and complete work across the people in your household.</p>
+        </article>
+        <article>
+          <span class="pillar-icon">03</span>
+          <h2>Timed around life</h2>
+          <p>Use calendars and reminders so upkeep lands when it can actually happen.</p>
+        </article>
+      </section>
+
+      <section class="section what-section" id="what">
+        <div class="section-heading reveal">
+          <p class="eyebrow">What Huney is</p>
+          <h2>Not a chore chart. Not a blank task app. A home operating layer.</h2>
+          <p>
+            Most household tools make you build the system yourself. Huney starts
+            with the shape of your home, then helps create, schedule, and share
+            the work that normally lives in one person's head.
+          </p>
+        </div>
+
+        <div class="definition-grid">
+          <article class="definition-card large-card reveal">
+            <p class="card-kicker">The point</p>
+            <h3>Make the work visible without making anyone feel managed.</h3>
+            <p>
+              Huney is meant to feel warm, practical, and human. It gives the
+              household a plan without turning home into a performance dashboard.
+            </p>
+          </article>
+          <article class="definition-card tilt-card reveal">
+            <p class="card-kicker">It covers</p>
+            <ul class="clean-list">
+              <li>Cleaning and home upkeep</li>
+              <li>Meal planning and recipe flow</li>
+              <li>Car care and maintenance</li>
+              <li>Pets, health routines, and recurring reminders</li>
+            </ul>
+          </article>
+          <article class="definition-card tilt-card reveal">
+            <p class="card-kicker">It avoids</p>
+            <ul class="clean-list">
+              <li>Judgy productivity language</li>
+              <li>Over-optimized life-hacking</li>
+              <li>Making one person rebuild the plan from scratch</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="full-bleed band-story">
+        <div class="band-inner story-layout">
+          <div class="reveal">
+            <p class="eyebrow">Why it exists</p>
+            <h2>Huney is for the moment when the list in your head gets too heavy.</h2>
+            <p>
+              It was created from the very normal feeling that a home can be full
+              of care, love, routines, errands, maintenance, and tiny obligations,
+              but still lack one shared place where all of that work can live.
+            </p>
+            <p>
+              Huney gives that work a home. It helps the household see what needs
+              attention, who can take it, and when it fits into the week.
+            </p>
+          </div>
+          <div class="reason-stack" aria-label="Reasons Huney helps">
+            <div>
+              <span></span>
+              <p>Less carrying the household plan alone.</p>
+            </div>
+            <div>
+              <span></span>
+              <p>Fewer tense check-ins about what got done.</p>
+            </div>
+            <div>
+              <span></span>
+              <p>Less forgetting when maintenance last happened.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="who">
+        <div class="split-heading reveal">
+          <div>
+            <p class="eyebrow">Who it is for</p>
+            <h2>Households that need coordination, not another lecture.</h2>
+          </div>
+          <p>
+            Huney is designed for real homes: imperfect weeks, changing schedules,
+            shared responsibilities, half-finished chores, dinner decisions, pets,
+            appointments, repairs, and people who are trying.
+          </p>
+        </div>
+
+        <div class="audience-grid">
+          <article class="audience-card reveal">
+            <h3>Couples</h3>
+            <p>For partners who want a clearer way to split home work without turning every task into a conversation.</p>
+          </article>
+          <article class="audience-card reveal">
+            <h3>Families</h3>
+            <p>For families managing kids, pets, meals, school weeks, health routines, and the upkeep that comes with it.</p>
+          </article>
+          <article class="audience-card reveal">
+            <h3>Roommates</h3>
+            <p>For shared homes that need rotating ownership, lightweight accountability, and fewer mystery messes.</p>
+          </article>
+          <article class="audience-card reveal">
+            <h3>Busy adults</h3>
+            <p>For people who want their home to feel cared for without needing to become a full-time household project manager.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section how-section" id="how">
+        <div class="section-heading centered reveal">
+          <p class="eyebrow">How it works</p>
+          <h2>Tell Huney about the home. Huney builds the household baseline.</h2>
+          <p>
+            Set up the home once, then use Huney as the shared place for
+            recurring tasks, ownership, reminders, meals, maintenance history,
+            and the household details that are easy to lose track of.
+          </p>
+        </div>
+
+        <div class="steps">
+          <article class="step-card reveal">
+            <span class="step-number">1</span>
+            <h3>Set up the household</h3>
+            <p>
+              Add your home type, bedrooms, bathrooms, pets, cars, routines,
+              cooking frequency, desired cleanliness level, and the people who
+              share the work.
+            </p>
+          </article>
+          <article class="step-card reveal">
+            <span class="step-number">2</span>
+            <h3>Start with realistic routines</h3>
+            <p>
+              Huney suggests household tasks and cadences across cleaning,
+              maintenance, groceries, pets, car care, health, and daily reset
+              routines.
+            </p>
+          </article>
+          <article class="step-card reveal">
+            <span class="step-number">3</span>
+            <h3>Assign, rotate, and adjust</h3>
+            <p>
+              Tasks can be assigned, opened to anyone, rotated, edited, completed,
+              or updated as the household learns what actually works.
+            </p>
+          </article>
+          <article class="step-card reveal">
+            <span class="step-number">4</span>
+            <h3>Use the calendar layer</h3>
+            <p>
+              Meals and reminders can land on the real calendar so dinner, upkeep,
+              and routines show up where the household already looks.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="full-bleed feature-band">
+        <div class="band-inner feature-layout">
+          <div class="meal-app-preview" aria-label="Huney meals screen preview">
+            <div class="meal-app-top">
+              <div>
+                <h3>Meals</h3>
+                <p>Plan meals and publish them to the calendar.</p>
+              </div>
+              <span class="meal-add">+</span>
+            </div>
+            <div class="meal-tabs" aria-hidden="true">
+              <span class="active">Planner</span>
+              <span>Groceries</span>
+              <span>Recipes</span>
+            </div>
+            <div class="meal-week-card">
+              <span class="chevron">‹</span>
+              <div>
+                <strong>Week of Jun 28, 2026</strong>
+                <p>2 planned meals</p>
+              </div>
+              <span class="tray-icon">⌄</span>
+            </div>
+            <div class="meal-day-card">
+              <h4>Sunday</h4>
+              <div class="meal-slot">
+                <span class="slot-icon sun-icon"></span>
+                <div>
+                  <strong>No recipe selected</strong>
+                  <p>Lunch&nbsp;&nbsp;12:00 PM</p>
+                </div>
+                <span class="meal-pill">Choose</span>
+              </div>
+              <div class="meal-divider"></div>
+              <div class="meal-slot planned">
+                <span class="slot-icon moon-icon"></span>
+                <div>
+                  <strong>Cajun Garlic Shrimp Ramen</strong>
+                  <p>Dinner&nbsp;&nbsp;5:15 PM</p>
+                </div>
+                <span class="meal-pill">Edit</span>
+              </div>
+            </div>
+          </div>
+          <div class="reveal">
+            <p class="eyebrow">Meals inside the household plan</p>
+            <h2>Save the recipe. Put dinner where everyone already looks.</h2>
+            <p>
+              Huney keeps meal planning close to the rest of home care. Add a
+              recipe, keep the ingredients and prep steps handy, and publish
+              dinner to the shared calendar so cooking fits beside tasks,
+              routines, appointments, and maintenance reminders.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing">
+        <div class="closing-inner">
+          <img src="assets/huney-app-icon.png" alt="" aria-hidden="true">
+          <p class="eyebrow">Huney</p>
+          <h2>Home runs better when the plan is shared.</h2>
+          <p>
+            A warm, practical household app for the work that keeps life cared for.
+          </p>
         </div>
       </section>
     </main>
@@ -122,8 +342,8 @@
     <footer class="site-footer">
       <span>&copy; 2026 Huney</span>
       <nav aria-label="Footer navigation">
-        <a href="/support/">Support</a>
-        <a href="/privacy/">Privacy</a>
+        <a href="support/">Support</a>
+        <a href="privacy/">Privacy</a>
       </nav>
     </footer>
   </body>
