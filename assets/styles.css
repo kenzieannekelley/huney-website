@@ -160,30 +160,24 @@ h1 {
   color: var(--ink);
 }
 
-.setup-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 30px;
-}
-
-.setup-row span {
-  border: 1px solid rgba(46, 74, 66, 0.18);
-  border-radius: 999px;
-  background: rgba(255, 250, 240, 0.82);
-  padding: 8px 12px;
-  color: var(--green);
-  font-size: 0.9rem;
-  font-weight: 750;
-}
-
 .phone-preview {
-  width: min(100%, 386px);
+  width: min(100%, 330px);
   margin: 0 auto;
-  padding: 12px;
-  border-radius: 44px;
-  background: #1d2e27;
+  padding: 0;
+  border-radius: 34px;
+  background: var(--cream);
   box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.welcome-preview {
+  border: 1px solid rgba(46, 74, 66, 0.12);
+}
+
+.welcome-preview img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .phone-top {
