@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "deploy": "vercel deploy --prod --project huney-website --yes"
+    "deploy": "npx vercel deploy --prod --project huney-website --yes"
   }
 }
