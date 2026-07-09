@@ -1283,38 +1283,73 @@ h1 {
 }
 
 .page-shell {
-  width: min(1120px, calc(100% - 32px));
+  width: min(920px, calc(100% - 32px));
   margin: 0 auto;
-  padding: 138px 0 90px;
+  padding: 156px 0 96px;
 }
 
 .page-hero {
-  max-width: 820px;
-  margin-bottom: 42px;
-  border: 1px solid var(--line);
-  border-radius: 28px;
-  background:
-    linear-gradient(135deg, rgba(252, 243, 227, 0.92), rgba(238, 241, 225, 0.72)),
-    var(--cream);
-  box-shadow: var(--soft-shadow);
-  padding: 36px;
+  max-width: 760px;
+  margin-bottom: 56px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--line);
 }
 
 .page-hero h1 {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2.65rem, 6vw, 4.75rem);
+  line-height: 1;
+}
+
+.page-hero .button {
+  margin-top: 12px;
 }
 
 .content-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.content-grid article,
+.support-note,
+.legal-copy {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.content-grid article {
+  padding: 30px 0;
+  border-bottom: 1px solid rgba(216, 205, 189, 0.78);
+}
+
+.content-grid article:first-child {
+  padding-top: 0;
+}
+
+.content-grid h2,
+.support-note h2,
+.legal-copy h2 {
+  margin-bottom: 8px;
+  font-family: var(--display-font);
+  font-size: clamp(1.45rem, 2.6vw, 2rem);
+  line-height: 1.1;
+}
+
+.content-grid p,
+.support-note li,
+.legal-copy p,
+.legal-copy li {
+  color: var(--muted);
+  font-size: 1.04rem;
+  line-height: 1.75;
 }
 
 .support-note {
-  margin-top: 16px;
-  background:
-    linear-gradient(135deg, rgba(252, 243, 227, 0.9), rgba(234, 225, 209, 0.38)),
-    var(--cream);
+  margin-top: 40px;
+  padding-top: 34px;
+  border-top: 2px solid var(--green);
 }
 
 .support-note ul,
@@ -1330,16 +1365,15 @@ h1 {
 }
 
 .legal-copy {
-  border: 1px solid var(--line);
-  border-radius: 28px;
-  background: rgba(252, 243, 227, 0.82);
-  box-shadow: var(--soft-shadow);
-  padding: 4px 34px 34px;
+  padding: 0;
 }
 
 .legal-copy h2 {
-  margin: 32px 0 8px;
-  font-size: 1.35rem;
+  margin: 42px 0 8px;
+}
+
+.legal-copy h2:first-child {
+  margin-top: 0;
 }
 
 @media (max-width: 1060px) {
@@ -1407,6 +1441,10 @@ h1 {
 
   .site-nav {
     gap: 12px;
+  }
+
+  .page-shell {
+    padding-top: 222px;
   }
 
   .motion-rail {
