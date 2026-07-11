@@ -615,14 +615,14 @@
 
       .phone-gallery {
         display: grid;
-        grid-template-columns: minmax(180px, 260px) minmax(86px, 118px);
+        grid-template-columns: minmax(176px, 236px) minmax(168px, 224px);
         justify-content: start;
-        gap: 16px;
+        gap: 20px;
         align-items: center;
       }
 
       .app-section .phone {
-        width: min(260px, 28vw);
+        width: min(236px, 25vw);
         border-width: 9px;
         border-radius: 36px;
         box-shadow: 0 22px 54px rgba(0, 0, 0, 0.20);
@@ -630,21 +630,19 @@
 
       .mini-stack {
         display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 12px;
       }
 
-      .screenshot-slot {
-        min-height: 128px;
-        display: grid;
-        place-items: center;
-        padding: 12px;
-        border: 1px dashed rgba(21, 86, 64, 0.26);
-        border-radius: 20px;
-        color: rgba(18, 55, 45, 0.52);
-        background: rgba(255, 250, 240, 0.38);
-        text-align: center;
-        font-size: 0.78rem;
-        font-weight: 750;
+      .screenshot-thumb {
+        width: 100%;
+        aspect-ratio: 9 / 19.5;
+        object-fit: cover;
+        object-position: top;
+        border: 4px solid rgba(255, 250, 241, 0.44);
+        border-radius: 18px;
+        background: var(--paper);
+        box-shadow: 0 16px 34px rgba(0, 0, 0, 0.13);
       }
 
       .app-copy h2 {
@@ -732,7 +730,7 @@
         }
 
         .app-section .phone {
-          width: min(260px, 52vw);
+          width: min(230px, 46vw);
         }
 
         .intro-grid,
@@ -782,9 +780,16 @@
 
         .intro-grid,
         .audience-grid,
-        .steps-grid,
-        .phone-gallery {
+        .steps-grid {
           grid-template-columns: 1fr;
+        }
+
+        .phone-gallery {
+          grid-template-columns: minmax(0, 230px);
+        }
+
+        .mini-stack {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
         }
 
         .section {
@@ -1009,12 +1014,14 @@
           <div class="section-inner app-showcase">
             <div class="phone-gallery">
               <div class="phone">
-                <img src="assets/huney-welcome-screen.png" alt="Huney app screen placeholder">
+                <img src="assets/app-home.png" alt="Huney Home screen">
               </div>
-              <div class="mini-stack" aria-label="Future Huney app screenshots">
-                <div class="screenshot-slot">Drop app screenshot here</div>
-                <div class="screenshot-slot">Drop app screenshot here</div>
-                <div class="screenshot-slot">Drop app screenshot here</div>
+              <div class="mini-stack" aria-label="Huney app screenshots">
+                <img class="screenshot-thumb" src="assets/app-plan.png" alt="Huney Plan screen">
+                <img class="screenshot-thumb" src="assets/app-progress.png" alt="Huney Progress screen">
+                <img class="screenshot-thumb" src="assets/app-cooking.png" alt="Huney Cooking Mode screen">
+                <img class="screenshot-thumb" src="assets/app-weekly-vote.png" alt="Huney weekly goal screen">
+                <img class="screenshot-thumb" src="assets/app-welcome.png" alt="Huney welcome screen">
               </div>
             </div>
             <div class="app-copy">
