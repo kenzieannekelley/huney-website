@@ -615,9 +615,9 @@
 
       .phone-gallery {
         display: grid;
-        grid-template-columns: minmax(176px, 236px) minmax(168px, 224px);
+        grid-template-columns: minmax(176px, 236px) minmax(186px, 252px);
         justify-content: start;
-        gap: 20px;
+        gap: 30px;
         align-items: center;
       }
 
@@ -631,10 +631,29 @@
       .mini-stack {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
+        gap: 18px;
+      }
+
+      .screenshot-button {
+        padding: 0;
+        border: 0;
+        border-radius: 20px;
+        background: transparent;
+        cursor: pointer;
+        transition: transform 180ms ease, opacity 180ms ease;
+      }
+
+      .screenshot-button:hover,
+      .screenshot-button:focus-visible {
+        transform: translateY(-4px);
+      }
+
+      .screenshot-button[aria-current="true"] {
+        opacity: 0.62;
       }
 
       .screenshot-thumb {
+        display: block;
         width: 100%;
         aspect-ratio: 9 / 19.5;
         object-fit: cover;
@@ -790,6 +809,7 @@
 
         .mini-stack {
           grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 14px;
         }
 
         .section {
@@ -1014,14 +1034,62 @@
           <div class="section-inner app-showcase">
             <div class="phone-gallery">
               <div class="phone">
-                <img src="assets/app-home.png" alt="Huney Home screen">
+                <img
+                  id="featured-app-screen"
+                  src="assets/app-welcome.png"
+                  alt="Huney welcome screen"
+                >
               </div>
               <div class="mini-stack" aria-label="Huney app screenshots">
-                <img class="screenshot-thumb" src="assets/app-plan.png" alt="Huney Plan screen">
-                <img class="screenshot-thumb" src="assets/app-progress.png" alt="Huney Progress screen">
-                <img class="screenshot-thumb" src="assets/app-cooking.png" alt="Huney Cooking Mode screen">
-                <img class="screenshot-thumb" src="assets/app-weekly-vote.png" alt="Huney weekly goal screen">
-                <img class="screenshot-thumb" src="assets/app-welcome.png" alt="Huney welcome screen">
+                <button
+                  class="screenshot-button"
+                  type="button"
+                  aria-current="true"
+                  data-screen-src="assets/app-welcome.png"
+                  data-screen-alt="Huney welcome screen"
+                >
+                  <img class="screenshot-thumb" src="assets/app-welcome.png" alt="">
+                </button>
+                <button
+                  class="screenshot-button"
+                  type="button"
+                  data-screen-src="assets/app-home.png"
+                  data-screen-alt="Huney Home screen"
+                >
+                  <img class="screenshot-thumb" src="assets/app-home.png" alt="">
+                </button>
+                <button
+                  class="screenshot-button"
+                  type="button"
+                  data-screen-src="assets/app-plan.png"
+                  data-screen-alt="Huney Plan screen"
+                >
+                  <img class="screenshot-thumb" src="assets/app-plan.png" alt="">
+                </button>
+                <button
+                  class="screenshot-button"
+                  type="button"
+                  data-screen-src="assets/app-progress.png"
+                  data-screen-alt="Huney Progress screen"
+                >
+                  <img class="screenshot-thumb" src="assets/app-progress.png" alt="">
+                </button>
+                <button
+                  class="screenshot-button"
+                  type="button"
+                  data-screen-src="assets/app-cooking.png"
+                  data-screen-alt="Huney Cooking Mode screen"
+                >
+                  <img class="screenshot-thumb" src="assets/app-cooking.png" alt="">
+                </button>
+                <button
+                  class="screenshot-button"
+                  type="button"
+                  data-screen-src="assets/app-weekly-vote.png"
+                  data-screen-alt="Huney weekly goal screen"
+                >
+                  <img class="screenshot-thumb" src="assets/app-weekly-vote.png" alt="">
+                </button>
               </div>
             </div>
             <div class="app-copy">
@@ -1064,5 +1132,20 @@
         </nav>
       </footer>
     </div>
+    <script>
+      const featuredAppScreen = document.querySelector("#featured-app-screen");
+      const screenshotButtons = document.querySelectorAll(".screenshot-button");
+
+      screenshotButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          if (!featuredAppScreen) return;
+
+          featuredAppScreen.src = button.dataset.screenSrc;
+          featuredAppScreen.alt = button.dataset.screenAlt;
+          screenshotButtons.forEach((item) => item.removeAttribute("aria-current"));
+          button.setAttribute("aria-current", "true");
+        });
+      });
+    </script>
   </body>
 </html>
