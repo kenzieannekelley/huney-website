@@ -1,15 +1,150 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Huney | Website Redesign Review</title>
+    <title>Huney: Household Management App for Shared Home Life</title>
     <meta
       name="description"
-      content="A visual review mockup for the Huney marketing website."
+      content="Huney is a household management app for couples, families, and roommates to share chores, meal planning, calendars, reminders, maintenance, and goals."
     >
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="theme-color" content="#155640">
+    <link rel="canonical" href="https://huney.vercel.app/">
+    <link rel="alternate" type="text/plain" href="https://huney.vercel.app/llms.txt" title="Huney for language models">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Huney">
+    <meta property="og:title" content="Huney: Household Management App for Shared Home Life">
+    <meta property="og:description" content="Share chores, meals, calendars, reminders, maintenance, and weekly goals in one calm household app.">
+    <meta property="og:url" content="https://huney.vercel.app/">
+    <meta property="og:image" content="https://huney.vercel.app/assets/huney-couch.png">
+    <meta property="og:image:width" content="1313">
+    <meta property="og:image:height" content="896">
+    <meta property="og:image:alt" content="Huney household app illustration">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Huney: Household Management App">
+    <meta name="twitter:description" content="A shared app for chores, meals, calendars, reminders, maintenance, and weekly goals.">
+    <meta name="twitter:image" content="https://huney.vercel.app/assets/huney-couch.png">
     <link rel="icon" href="assets/huney-app-icon.png">
     <link rel="apple-touch-icon" href="assets/huney-app-icon.png">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://huney.vercel.app/#organization",
+            "name": "Huney",
+            "url": "https://huney.vercel.app/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://huney.vercel.app/assets/huney-app-icon.png",
+              "width": 1024,
+              "height": 1024
+            },
+            "description": "Huney makes household planning easier to share across couples, families, roommates, and busy adults.",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "customer support",
+              "email": "huney.support@gmail.com",
+              "url": "https://huney.vercel.app/support"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://huney.vercel.app/#website",
+            "url": "https://huney.vercel.app/",
+            "name": "Huney",
+            "description": "A shared household management app for chores, meals, calendars, reminders, maintenance, and goals.",
+            "publisher": {
+              "@id": "https://huney.vercel.app/#organization"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://huney.vercel.app/#webpage",
+            "url": "https://huney.vercel.app/",
+            "name": "Huney: Household Management App for Shared Home Life",
+            "description": "Huney is a household management app for couples, families, and roommates to share chores, meal planning, calendars, reminders, maintenance, and goals.",
+            "isPartOf": {
+              "@id": "https://huney.vercel.app/#website"
+            },
+            "about": {
+              "@id": "https://huney.vercel.app/#app"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "MobileApplication",
+            "@id": "https://huney.vercel.app/#app",
+            "name": "Huney",
+            "url": "https://huney.vercel.app/",
+            "applicationCategory": "LifestyleApplication",
+            "operatingSystem": "iOS",
+            "description": "Huney is a shared household management app that helps households coordinate chores, meals, calendars, reminders, maintenance, and weekly goals.",
+            "image": "https://huney.vercel.app/assets/app-home.png",
+            "featureList": [
+              "Shared household tasks and reminders",
+              "Meal and recipe planning",
+              "Calendar-aware planning",
+              "Home, pet, and car care",
+              "Maintenance history",
+              "Shared weekly goals"
+            ],
+            "author": {
+              "@id": "https://huney.vercel.app/#organization"
+            }
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://huney.vercel.app/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is Huney?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Huney is a shared household management app. It turns chores, meals, calendars, reminders, maintenance, and weekly goals into one practical plan that the people in a home can see and manage together."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Who is Huney for?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Huney is designed for couples, families, roommates, and busy adults who want a clearer way to coordinate the work of running a home."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What can a household manage in Huney?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A household can use Huney to manage recurring tasks, ownership, reminders, meals, recipes, shared calendars, pets, car care, maintenance history, and weekly goals."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How is Huney different from a basic chore app?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A basic chore app usually starts with a blank list. Huney starts with the shape of the home and helps create a realistic household baseline, then supports assignments, rotations, reminders, meals, calendars, and maintenance in the same shared system."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does Huney support shared households?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Huney supports shared households so members can see assigned and open tasks, coordinate plans, and keep household information in sync."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
     <style>
       :root {
         --ink: #12372d;
@@ -68,6 +203,19 @@
       img {
         display: block;
         max-width: 100%;
+        height: auto;
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
       }
 
       .page {
@@ -764,6 +912,43 @@
         }
       }
 
+      .faq-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+        margin-top: 32px;
+      }
+
+      .faq-item {
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        background: rgba(255, 250, 241, 0.74);
+        box-shadow: var(--soft-shadow);
+        padding: 22px 24px;
+      }
+
+      .faq-item:last-child {
+        grid-column: 1 / -1;
+      }
+
+      .faq-item summary {
+        cursor: pointer;
+        font-family: var(--display);
+        font-size: 1.15rem;
+        font-weight: 800;
+        line-height: 1.3;
+      }
+
+      .faq-item p {
+        margin: 14px 0 0;
+        color: rgba(18, 55, 45, 0.7);
+        line-height: 1.65;
+      }
+
+      .center-actions {
+        justify-content: center;
+      }
+
       @media (max-width: 640px) {
         .hero {
           padding-top: 112px;
@@ -829,6 +1014,14 @@
         .intro-grid article {
           padding: 26px;
         }
+
+        .faq-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .faq-item:last-child {
+          grid-column: auto;
+        }
       }
     </style>
   </head>
@@ -836,8 +1029,8 @@
     <div class="page">
       <header class="site-header">
         <a class="brand" href="#top" aria-label="Huney home">
-          <img class="brand-icon" src="assets/huney-app-icon.png" alt="">
-          <img class="brand-wordmark" src="assets/huney-wordmark.png" alt="Huney">
+          <img class="brand-icon" src="assets/huney-app-icon.png" alt="" width="1024" height="1024">
+          <img class="brand-wordmark" src="assets/huney-wordmark.png" alt="Huney" width="1500" height="500">
         </a>
         <nav class="nav" aria-label="Main navigation">
           <a href="#top">Home</a>
@@ -853,13 +1046,17 @@
           <div class="hero-inner">
             <div class="hero-copy">
               <p class="eyebrow">Household planning that starts with real life</p>
-              <h1 id="hero-title">A home that runs smoothly,<br>together.</h1>
+              <h1 id="hero-title">The household management app for a home that runs smoothly, together.</h1>
               <p>
-                Huney turns the invisible work of home into a shared plan for
-                cleaning, meals, pets, maintenance, appointments, and the little
-                routines that keep life moving.
+                Huney is a shared household management app that turns chores,
+                meal planning, calendars, reminders, pets, car care, maintenance,
+                and weekly goals into one practical plan for couples, families,
+                roommates, and busy adults.
               </p>
-              <img class="hero-couch" src="assets/huney-couch.png" alt="">
+              <picture>
+                <source srcset="assets/huney-couch.webp" type="image/webp">
+                <img class="hero-couch" src="assets/huney-couch.png" alt="A family relaxing together at home" width="1313" height="896" fetchpriority="high">
+              </picture>
               <div class="hero-actions">
                 <a class="button primary" href="#app">See the app</a>
                 <a class="button secondary" href="#how">How it works</a>
@@ -868,7 +1065,7 @@
           </div>
         </section>
 
-        <div class="feature-rail" aria-label="Huney feature highlights">
+        <section class="feature-rail" aria-label="Huney feature highlights">
           <div class="rail-track">
             <span>Shared calendars</span>
             <span>Cleaning</span>
@@ -887,10 +1084,11 @@
             <span>Maintenance</span>
             <span>Weekly goals</span>
           </div>
-        </div>
+        </section>
 
         <section class="section soft-band">
           <div class="section-inner intro-grid">
+            <h2 class="sr-only">How Huney helps households plan together</h2>
             <article>
               <span class="number">01</span>
               <h3>Built from your home</h3>
@@ -1038,57 +1236,67 @@
                   id="featured-app-screen"
                   src="assets/app-welcome.png"
                   alt="Huney welcome screen"
+                  width="414"
+                  height="900"
+                  loading="lazy"
+                  decoding="async"
                 >
               </div>
-              <div class="mini-stack" aria-label="Huney app screenshots">
+              <div class="mini-stack" role="group" aria-label="Huney app screenshots">
                 <button
                   class="screenshot-button"
                   type="button"
+                  aria-label="Show Huney welcome screen"
                   aria-current="true"
                   data-screen-src="assets/app-welcome.png"
                   data-screen-alt="Huney welcome screen"
                 >
-                  <img class="screenshot-thumb" src="assets/app-welcome.png" alt="">
+                  <img class="screenshot-thumb" src="assets/app-welcome.png" alt="" width="414" height="900" loading="lazy" decoding="async">
                 </button>
                 <button
                   class="screenshot-button"
                   type="button"
+                  aria-label="Show Huney Home screen"
                   data-screen-src="assets/app-home.png"
                   data-screen-alt="Huney Home screen"
                 >
-                  <img class="screenshot-thumb" src="assets/app-home.png" alt="">
+                  <img class="screenshot-thumb" src="assets/app-home.png" alt="" width="414" height="900" loading="lazy" decoding="async">
                 </button>
                 <button
                   class="screenshot-button"
                   type="button"
+                  aria-label="Show Huney Plan screen"
                   data-screen-src="assets/app-plan.png"
                   data-screen-alt="Huney Plan screen"
                 >
-                  <img class="screenshot-thumb" src="assets/app-plan.png" alt="">
+                  <img class="screenshot-thumb" src="assets/app-plan.png" alt="" width="414" height="900" loading="lazy" decoding="async">
                 </button>
                 <button
                   class="screenshot-button"
                   type="button"
+                  aria-label="Show Huney Progress screen"
                   data-screen-src="assets/app-progress.png"
                   data-screen-alt="Huney Progress screen"
                 >
-                  <img class="screenshot-thumb" src="assets/app-progress.png" alt="">
+                  <img class="screenshot-thumb" src="assets/app-progress.png" alt="" width="414" height="900" loading="lazy" decoding="async">
                 </button>
                 <button
                   class="screenshot-button"
                   type="button"
+                  aria-label="Show Huney Cooking Mode screen"
                   data-screen-src="assets/app-cooking.png"
                   data-screen-alt="Huney Cooking Mode screen"
                 >
-                  <img class="screenshot-thumb" src="assets/app-cooking.png" alt="">
+                  <img class="screenshot-thumb" src="assets/app-cooking.png" alt="" width="414" height="900" loading="lazy" decoding="async">
                 </button>
                 <button
                   class="screenshot-button"
                   type="button"
+                  aria-label="Show Huney weekly goal screen"
                   data-screen-src="assets/app-weekly-vote.png"
                   data-screen-alt="Huney weekly goal screen"
                 >
-                  <img class="screenshot-thumb" src="assets/app-weekly-vote.png" alt="">
+                  <img class="screenshot-thumb" src="assets/app-weekly-vote.png" alt="" width="414" height="900" loading="lazy" decoding="async">
                 </button>
               </div>
             </div>
@@ -1096,15 +1304,50 @@
               <p class="eyebrow">Inside the app</p>
               <h2>Pretty, calm, and useful from the first screen.</h2>
               <p class="lead">
-                The website should feel like the product: soft gradients, spare
-                layouts, warm copy, and only strong forest green when something
-                needs attention.
+                Huney keeps the household plan calm and readable, with a clear
+                view of what needs attention and enough context to decide what
+                happens next.
               </p>
               <ul class="list">
                 <li>Home shows what needs attention without visual clutter.</li>
                 <li>Plan keeps meals and routines close to the household calendar.</li>
                 <li>Progress makes shared effort feel encouraging instead of scored.</li>
               </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="section soft-band" id="faq">
+          <div class="section-inner">
+            <div class="centered">
+              <p class="eyebrow">Frequently asked questions</p>
+              <h2>What to know about Huney</h2>
+              <p class="lead">
+                A quick guide to the household management app and the home
+                planning problems it is built to solve.
+              </p>
+            </div>
+            <div class="faq-grid">
+              <details class="faq-item" open>
+                <summary>What is Huney?</summary>
+                <p>Huney is a shared household management app. It turns chores, meals, calendars, reminders, maintenance, and weekly goals into one practical plan that the people in a home can see and manage together.</p>
+              </details>
+              <details class="faq-item">
+                <summary>Who is Huney for?</summary>
+                <p>Huney is designed for couples, families, roommates, and busy adults who want a clearer way to coordinate the work of running a home.</p>
+              </details>
+              <details class="faq-item">
+                <summary>What can a household manage in Huney?</summary>
+                <p>A household can use Huney to manage recurring tasks, ownership, reminders, meals, recipes, shared calendars, pets, car care, maintenance history, and weekly goals.</p>
+              </details>
+              <details class="faq-item">
+                <summary>How is Huney different from a basic chore app?</summary>
+                <p>A basic chore app usually starts with a blank list. Huney starts with the shape of the home and helps create a realistic household baseline, then supports assignments, rotations, reminders, meals, calendars, and maintenance in the same shared system.</p>
+              </details>
+              <details class="faq-item">
+                <summary>Does Huney support shared households?</summary>
+                <p>Yes. Huney supports shared households so members can see assigned and open tasks, coordinate plans, and keep household information in sync.</p>
+              </details>
             </div>
           </div>
         </section>
@@ -1116,7 +1359,7 @@
             <p class="lead centered">
               A warm, practical household app for the work that keeps life cared for.
             </p>
-            <div class="hero-actions" style="justify-content: center;">
+            <div class="hero-actions center-actions">
               <a class="button primary" href="#app">See the app</a>
               <a class="button secondary" href="support/">Support</a>
             </div>
@@ -1127,6 +1370,7 @@
       <footer class="site-footer">
         <span>&copy; 2026 Huney</span>
         <nav aria-label="Footer navigation">
+          <a href="#faq">FAQ</a>
           <a href="support/">Support</a>
           <a href="privacy/">Privacy</a>
         </nav>

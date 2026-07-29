@@ -1,0 +1,25 @@
+# Huney
+
+> Huney is a shared household management app for couples, families, roommates, and busy adults. It turns chores, meal planning, calendars, reminders, pets, car care, maintenance, recipes, and weekly goals into one practical household plan.
+
+Huney is built for people who want the work of running a home to be visible and shared without making home feel like a performance dashboard. The app begins with the shape of the household, suggests realistic routines, and lets members assign, rotate, edit, and complete work together.
+
+## Key pages
+
+- [Huney home](https://huney.vercel.app/): Product overview, audience, features, screenshots, workflow, and frequently asked questions.
+- [Huney support](https://huney.vercel.app/support): Help with setup, tasks, calendars, recipes, shared households, and Premium.
+- [Huney privacy policy](https://huney.vercel.app/privacy): How Huney handles account, household, calendar, location, recipe, receipt, grocery, and support information.
+- [Product facts for agents](https://huney.vercel.app/product.md): A concise, machine-readable product summary.
+
+## Core capabilities
+
+- Shared household tasks, ownership, rotations, and reminders
+- Meal and recipe planning
+- Calendar-aware household planning
+- Pet, car, and home maintenance routines
+- Maintenance history and household details
+- Shared weekly goals and progress
+
+## Contact
+
+- Support: huney.support@gmail.com
