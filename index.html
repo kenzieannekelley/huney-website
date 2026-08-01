@@ -409,53 +409,6 @@
         will-change: transform;
       }
 
-      .hero-orbit {
-        position: absolute;
-        z-index: 2;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        min-height: 38px;
-        padding: 0 15px;
-        border: 1px solid rgba(21, 86, 64, 0.11);
-        border-radius: 999px;
-        color: rgba(18, 55, 45, 0.74);
-        background: rgba(255, 250, 241, 0.72);
-        box-shadow: 0 14px 36px rgba(21, 86, 64, 0.10);
-        backdrop-filter: blur(12px);
-        font-size: 0.82rem;
-        font-weight: 850;
-        pointer-events: none;
-        animation: orbitFloat 7s ease-in-out infinite;
-      }
-
-      .hero-orbit::before {
-        content: "";
-        width: 9px;
-        height: 9px;
-        border-radius: 50%;
-        background: var(--clay);
-        box-shadow: 0 0 0 5px rgba(199, 131, 115, 0.12);
-      }
-
-      .orbit-meals {
-        left: 5%;
-        top: 52%;
-        transform: rotate(-4deg);
-      }
-
-      .orbit-plants {
-        right: 4%;
-        top: 43%;
-        animation-delay: -2.2s;
-      }
-
-      .orbit-car {
-        right: 14%;
-        bottom: 18%;
-        animation-delay: -4.4s;
-      }
-
       .hero-copy > .eyebrow,
       .hero-copy > h1,
       .hero-copy > p:not(.eyebrow),
@@ -1096,11 +1049,6 @@
         50% { transform: translateY(-10px) rotate(0.35deg); }
       }
 
-      @keyframes orbitFloat {
-        0%, 100% { translate: 0 0; }
-        50% { translate: 0 -14px; }
-      }
-
       @keyframes reasonBreathe {
         0%, 100% { transform: translateX(0); }
         50% { transform: translateX(7px); }
@@ -1237,10 +1185,6 @@
           margin-top: 12px;
         }
 
-        .hero-orbit {
-          display: none;
-        }
-
         h2 {
           font-size: clamp(2rem, 9vw, 3rem);
         }
@@ -1351,9 +1295,6 @@
                 <source srcset="assets/huney-couch.webp" type="image/webp">
                 <img class="hero-couch" src="assets/huney-couch.png" alt="A family relaxing together at home" width="1313" height="896" fetchpriority="high">
               </picture>
-              <span class="hero-orbit orbit-meals" aria-hidden="true">Plan dinner</span>
-              <span class="hero-orbit orbit-plants" aria-hidden="true">Water the plants</span>
-              <span class="hero-orbit orbit-car" aria-hidden="true">Oil change due</span>
               <div class="hero-actions">
                 <a class="button primary" href="#app">See the app</a>
                 <a class="button secondary" href="#how">How it works</a>
