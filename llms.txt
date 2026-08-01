@@ -20,6 +20,12 @@ Huney is built for people who want the work of running a home to be visible and 
 - Maintenance history and household details
 - Shared weekly goals and progress
 
+## Regular and Premium
+
+Regular Huney includes personalized home setup, shared household access, tasks and reminders, Apple Calendar planning, meals and groceries, weekly goals and voting, kid completion approvals, car care, Vacation Mode, up to 50 manually entered inventory items, and up to 10 appliance records.
+
+Huney Premium includes everything in Regular and adds separate plans for multiple households or properties, Receipt Memory imports, unlimited inventory and appliance records, weather-aware seasonal preparation, calendar-aware travel prep, room reset plans, rental turnover routines, and emergency preparation.
+
 ## Contact
 
 - Support: huney.support@gmail.com

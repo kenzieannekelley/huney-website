@@ -90,7 +90,11 @@
               "Calendar-aware planning",
               "Home, pet, and car care",
               "Maintenance history",
-              "Shared weekly goals"
+              "Shared weekly goals",
+              "Vacation Mode and kid completion approvals",
+              "Household inventory and appliance records",
+              "Premium receipt scanning and weather-aware home prep",
+              "Premium multi-property household management"
             ],
             "author": {
               "@id": "https://huney.vercel.app/#organization"
@@ -138,6 +142,22 @@
                 "acceptedAnswer": {
                   "@type": "Answer",
                   "text": "Yes. Huney supports shared households so members can see assigned and open tasks, coordinate plans, and keep household information in sync."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is included in Regular Huney?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Regular Huney includes personalized home setup, shared tasks and reminders, Apple Calendar planning, meal plans and grocery lists, weekly goals, kid completion approvals, car care, Vacation Mode, up to 50 manually entered inventory items, and up to 10 appliance records."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What does Huney Premium add?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Huney Premium adds multiple households and properties, Receipt Memory imports, unlimited inventory and appliance records, weather-aware seasonal preparation, calendar-aware travel prep, room reset plans, rental turnover, and emergency preparation."
                 }
               }
             ]
@@ -384,7 +404,70 @@
         width: min(420px, 66vw);
         margin: 14px auto 0;
         opacity: 0.96;
+        filter: drop-shadow(0 24px 30px rgba(21, 86, 64, 0.11));
+        animation: couchFloat 6.5s ease-in-out infinite;
+        will-change: transform;
       }
+
+      .hero-orbit {
+        position: absolute;
+        z-index: 2;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        min-height: 38px;
+        padding: 0 15px;
+        border: 1px solid rgba(21, 86, 64, 0.11);
+        border-radius: 999px;
+        color: rgba(18, 55, 45, 0.74);
+        background: rgba(255, 250, 241, 0.72);
+        box-shadow: 0 14px 36px rgba(21, 86, 64, 0.10);
+        backdrop-filter: blur(12px);
+        font-size: 0.82rem;
+        font-weight: 850;
+        pointer-events: none;
+        animation: orbitFloat 7s ease-in-out infinite;
+      }
+
+      .hero-orbit::before {
+        content: "";
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: var(--clay);
+        box-shadow: 0 0 0 5px rgba(199, 131, 115, 0.12);
+      }
+
+      .orbit-meals {
+        left: 5%;
+        top: 52%;
+        transform: rotate(-4deg);
+      }
+
+      .orbit-plants {
+        right: 4%;
+        top: 43%;
+        animation-delay: -2.2s;
+      }
+
+      .orbit-car {
+        right: 14%;
+        bottom: 18%;
+        animation-delay: -4.4s;
+      }
+
+      .hero-copy > .eyebrow,
+      .hero-copy > h1,
+      .hero-copy > p:not(.eyebrow),
+      .hero-copy > picture,
+      .hero-copy > .hero-actions {
+        animation: heroIntro 760ms cubic-bezier(0.2, 0.72, 0.24, 1) both;
+      }
+
+      .hero-copy > h1 { animation-delay: 80ms; }
+      .hero-copy > p:not(.eyebrow) { animation-delay: 150ms; }
+      .hero-copy > picture { animation-delay: 220ms; }
+      .hero-copy > .hero-actions { animation-delay: 320ms; }
 
       .eyebrow {
         margin: 0 0 10px;
@@ -563,6 +646,13 @@
         padding: 34px;
         border-radius: 22px;
         background: rgba(255, 250, 241, 0.38);
+        transition: transform 260ms ease, background 260ms ease, box-shadow 260ms ease;
+      }
+
+      .intro-grid article:hover {
+        transform: translateY(-7px) rotate(-0.35deg);
+        background: rgba(255, 250, 241, 0.72);
+        box-shadow: var(--soft-shadow);
       }
 
       .intro-grid article + article {
@@ -692,7 +782,11 @@
         border-bottom: 1px solid rgba(255, 250, 240, 0.13);
         border-radius: 0;
         background: transparent;
+        animation: reasonBreathe 6s ease-in-out infinite;
       }
+
+      .reason:nth-child(2) { animation-delay: -2s; }
+      .reason:nth-child(3) { animation-delay: -4s; }
 
       .reason h3 {
         margin: 0;
@@ -749,6 +843,135 @@
         margin-left: auto;
       }
 
+      .plans-section {
+        overflow: hidden;
+      }
+
+      .plan-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: clamp(20px, 3vw, 34px);
+        margin-top: 48px;
+      }
+
+      .plan-column {
+        position: relative;
+        padding: clamp(28px, 4vw, 46px);
+        border: 1px solid rgba(21, 86, 64, 0.10);
+        border-radius: 30px;
+        background: rgba(255, 250, 241, 0.56);
+        box-shadow: var(--soft-shadow);
+        transition: transform 280ms ease, box-shadow 280ms ease;
+      }
+
+      .plan-column:hover {
+        transform: translateY(-7px);
+        box-shadow: 0 28px 68px rgba(21, 86, 64, 0.14);
+      }
+
+      .plan-column.premium {
+        color: white;
+        border-color: rgba(255, 250, 241, 0.18);
+        background:
+          radial-gradient(circle at 90% 8%, rgba(250, 236, 197, 0.20), transparent 15rem),
+          radial-gradient(circle at 8% 92%, rgba(244, 222, 215, 0.12), transparent 18rem),
+          linear-gradient(145deg, var(--forest), var(--forest-deep));
+      }
+
+      .plan-column h3 {
+        margin-bottom: 10px;
+        font-size: clamp(1.75rem, 2.5vw, 2.35rem);
+      }
+
+      .plan-intro {
+        min-height: 3.2em;
+        margin-bottom: 26px;
+        color: rgba(18, 55, 45, 0.67);
+        line-height: 1.6;
+      }
+
+      .premium .plan-intro {
+        color: rgba(255, 250, 241, 0.72);
+      }
+
+      .plan-tag {
+        display: inline-flex;
+        align-items: center;
+        min-height: 30px;
+        margin-bottom: 16px;
+        padding: 0 12px;
+        border-radius: 999px;
+        color: var(--forest);
+        background: var(--butter);
+        font-size: 0.73rem;
+        font-weight: 900;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+      }
+
+      .capability-list {
+        display: grid;
+        gap: 0;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .capability-list li {
+        position: relative;
+        padding: 15px 0 15px 34px;
+        border-top: 1px solid rgba(21, 86, 64, 0.10);
+        color: rgba(18, 55, 45, 0.76);
+        line-height: 1.45;
+        transition: transform 200ms ease, color 200ms ease;
+      }
+
+      .capability-list li::before {
+        content: "\2713";
+        position: absolute;
+        left: 0;
+        top: 14px;
+        display: grid;
+        width: 22px;
+        height: 22px;
+        place-items: center;
+        border-radius: 50%;
+        color: var(--forest);
+        background: var(--sage);
+        font-size: 0.75rem;
+        font-weight: 950;
+      }
+
+      .capability-list li:hover {
+        transform: translateX(5px);
+        color: var(--ink);
+      }
+
+      .premium .capability-list li {
+        border-color: rgba(255, 250, 241, 0.13);
+        color: rgba(255, 250, 241, 0.80);
+      }
+
+      .premium .capability-list li::before {
+        color: var(--forest-deep);
+        background: var(--butter);
+      }
+
+      .premium .capability-list li:hover {
+        color: white;
+      }
+
+      .plan-note {
+        margin: 24px 0 0;
+        color: rgba(18, 55, 45, 0.56);
+        font-size: 0.9rem;
+        line-height: 1.55;
+      }
+
+      .premium .plan-note {
+        color: rgba(255, 250, 241, 0.58);
+      }
+
       .app-section {
         padding-top: 86px;
         padding-bottom: 96px;
@@ -774,6 +997,7 @@
         border-width: 9px;
         border-radius: 36px;
         box-shadow: 0 22px 54px rgba(0, 0, 0, 0.20);
+        animation: phoneBreathe 6.8s ease-in-out infinite;
       }
 
       .mini-stack {
@@ -812,6 +1036,23 @@
         box-shadow: 0 16px 34px rgba(0, 0, 0, 0.13);
       }
 
+      #featured-app-screen.screen-swapping {
+        animation: screenSwap 420ms cubic-bezier(0.2, 0.72, 0.24, 1);
+      }
+
+      .motion-ready .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition:
+          opacity 700ms cubic-bezier(0.2, 0.72, 0.24, 1) var(--reveal-delay, 0ms),
+          transform 700ms cubic-bezier(0.2, 0.72, 0.24, 1) var(--reveal-delay, 0ms);
+      }
+
+      .motion-ready .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
       .app-copy h2 {
         color: var(--paper);
       }
@@ -842,6 +1083,36 @@
         max-width: 760px;
         margin-right: auto;
         margin-left: auto;
+      }
+
+      @keyframes heroIntro {
+        from { opacity: 0; transform: translateY(22px) scale(0.985); }
+        to { opacity: 1; transform: translateY(0) scale(1); }
+      }
+
+      @keyframes couchFloat {
+        0%, 100% { transform: translateY(0) rotate(-0.3deg); }
+        50% { transform: translateY(-10px) rotate(0.35deg); }
+      }
+
+      @keyframes orbitFloat {
+        0%, 100% { translate: 0 0; }
+        50% { translate: 0 -14px; }
+      }
+
+      @keyframes reasonBreathe {
+        0%, 100% { transform: translateX(0); }
+        50% { transform: translateX(7px); }
+      }
+
+      @keyframes phoneBreathe {
+        0%, 100% { transform: translateY(0) rotate(-0.25deg); }
+        50% { transform: translateY(-9px) rotate(0.25deg); }
+      }
+
+      @keyframes screenSwap {
+        0% { opacity: 0.35; transform: scale(0.985); }
+        100% { opacity: 1; transform: scale(1); }
       }
 
       .site-footer {
@@ -902,7 +1173,8 @@
 
         .intro-grid,
         .audience-grid,
-        .steps-grid {
+        .steps-grid,
+        .plan-grid {
           grid-template-columns: 1fr 1fr;
         }
 
@@ -964,6 +1236,10 @@
           margin-top: 12px;
         }
 
+        .hero-orbit {
+          display: none;
+        }
+
         h2 {
           font-size: clamp(2rem, 9vw, 3rem);
         }
@@ -984,7 +1260,8 @@
 
         .intro-grid,
         .audience-grid,
-        .steps-grid {
+        .steps-grid,
+        .plan-grid {
           grid-template-columns: 1fr;
         }
 
@@ -1023,6 +1300,23 @@
           grid-column: auto;
         }
       }
+
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+
+        *,
+        *::before,
+        *::after {
+          animation-duration: 1ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 1ms !important;
+        }
+
+        .motion-ready .reveal {
+          opacity: 1;
+          transform: none;
+        }
+      }
     </style>
   </head>
   <body>
@@ -1035,6 +1329,7 @@
         <nav class="nav" aria-label="Main navigation">
           <a href="#top">Home</a>
           <a href="#what">Features</a>
+          <a href="#plans">Plans</a>
           <a href="#story">Our story</a>
           <a href="#how">How it works</a>
           <a href="#support">Support</a>
@@ -1055,6 +1350,9 @@
                 <source srcset="assets/huney-couch.webp" type="image/webp">
                 <img class="hero-couch" src="assets/huney-couch.png" alt="A family relaxing together at home" width="1313" height="896" fetchpriority="high">
               </picture>
+              <span class="hero-orbit orbit-meals" aria-hidden="true">Plan dinner</span>
+              <span class="hero-orbit orbit-plants" aria-hidden="true">Water the plants</span>
+              <span class="hero-orbit orbit-car" aria-hidden="true">Oil change due</span>
               <div class="hero-actions">
                 <a class="button primary" href="#app">See the app</a>
                 <a class="button secondary" href="#how">How it works</a>
@@ -1085,7 +1383,7 @@
         </section>
 
         <section class="section soft-band">
-          <div class="section-inner intro-grid">
+          <div class="section-inner intro-grid reveal">
             <h2 class="sr-only">How Huney helps households plan together</h2>
             <article>
               <span class="number">01</span>
@@ -1107,7 +1405,7 @@
 
         <section class="section" id="what">
           <div class="section-inner">
-            <div class="split">
+            <div class="split reveal">
               <div>
                 <p class="eyebrow">What Huney is</p>
                 <h2>Not a chore chart. Not a blank task app. A home operating layer.</h2>
@@ -1130,7 +1428,7 @@
         </section>
 
         <section class="section dark-band" id="story">
-          <div class="section-inner split">
+          <div class="section-inner split reveal">
             <div>
               <p class="eyebrow">Why it exists</p>
               <h2>For the moment when the list in your head gets too heavy.</h2>
@@ -1163,13 +1461,13 @@
 
         <section class="section">
           <div class="section-inner">
-            <div class="split">
+            <div class="split reveal">
               <div>
                 <p class="eyebrow">Who it is for</p>
                 <h2>Households that need coordination, not another lecture.</h2>
               </div>
             </div>
-            <div class="audience-grid quiet-grid">
+            <div class="audience-grid quiet-grid reveal">
               <article class="panel">
                 <h3>Couples</h3>
                 <p class="lead">For partners who want a clearer way to split home work.</p>
@@ -1192,7 +1490,7 @@
 
         <section class="section soft-band" id="how">
           <div class="section-inner">
-            <div class="centered">
+            <div class="centered reveal">
               <p class="eyebrow">How it works</p>
               <h2>Tell Huney about the home. Huney builds the household baseline.</h2>
               <p class="lead">
@@ -1201,7 +1499,7 @@
                 and the household details that are easy to lose track of.
               </p>
             </div>
-            <div class="steps-grid">
+            <div class="steps-grid reveal">
               <article class="panel">
                 <span class="number">1</span>
                 <h3>Set up the household</h3>
@@ -1226,8 +1524,56 @@
           </div>
         </section>
 
+        <section class="section plans-section" id="plans">
+          <div class="section-inner">
+            <div class="centered reveal">
+              <p class="eyebrow">Regular and Premium</p>
+              <h2>A complete household plan, with more context when you want it.</h2>
+              <p class="lead">
+                Regular Huney covers the everyday work of running one home. Premium
+                adds deeper records, smarter preparation, and room for every property
+                you care for.
+              </p>
+            </div>
+            <div class="plan-grid">
+              <article class="plan-column reveal" style="--reveal-delay: 70ms">
+                <span class="plan-tag">Included in Regular</span>
+                <h3>The shared plan for home</h3>
+                <p class="plan-intro">Everything a household needs to get organized and keep the week moving.</p>
+                <ul class="capability-list">
+                  <li>Personalized setup for your home, people, pets, plants, and routines</li>
+                  <li>Shared tasks, owners, rotations, reminders, snooze, and skip today</li>
+                  <li>Household invites, cloud sync, shared completions, and kid approvals</li>
+                  <li>Apple Calendar planning, busy-time awareness, and Vacation Mode</li>
+                  <li>Weekly meals, recipes, grocery lists, leftovers, and cooking mode</li>
+                  <li>Weekly goals, voting, points, progress, and completion history</li>
+                  <li>Car care for oil, tires, registration, insurance, and washes</li>
+                  <li>Up to 50 manual inventory items and 10 appliance records</li>
+                </ul>
+                <p class="plan-note">Regular Huney is built to be useful on its own, without requiring an upgrade.</p>
+              </article>
+
+              <article class="plan-column premium reveal" style="--reveal-delay: 150ms">
+                <span class="plan-tag">Premium adds</span>
+                <h3>More memory for a fuller home life</h3>
+                <p class="plan-intro">For households managing more records, more context, or more than one home.</p>
+                <ul class="capability-list">
+                  <li>Separate plans and household codes for rentals, vacation homes, or family properties</li>
+                  <li>Receipt Memory imports plus unlimited household inventory</li>
+                  <li>Unlimited appliance, filter, warranty, and service records</li>
+                  <li>Weather-aware prompts for heat, freezes, rain, wind, and snow</li>
+                  <li>Calendar-aware travel preparation and smarter task timing</li>
+                  <li>Focused room reset plans and seasonal care</li>
+                  <li>Rental turnover routines and emergency preparation</li>
+                </ul>
+                <p class="plan-note">Premium includes everything in Regular. Existing records stay in place if a household later returns to Regular.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
         <section class="section dark-band app-section" id="app">
-          <div class="section-inner app-showcase">
+          <div class="section-inner app-showcase reveal">
             <div class="phone-gallery">
               <div class="phone">
                 <img
@@ -1317,7 +1663,7 @@
 
         <section class="section soft-band" id="faq">
           <div class="section-inner">
-            <div class="centered">
+            <div class="centered reveal">
               <p class="eyebrow">Frequently asked questions</p>
               <h2>What to know about Huney</h2>
               <p class="lead">
@@ -1346,12 +1692,20 @@
                 <summary>Does Huney support shared households?</summary>
                 <p>Yes. Huney supports shared households so members can see assigned and open tasks, coordinate plans, and keep household information in sync.</p>
               </details>
+              <details class="faq-item">
+                <summary>What is included in Regular Huney?</summary>
+                <p>Regular Huney includes personalized home setup, shared tasks and reminders, Apple Calendar planning, meal plans and grocery lists, weekly goals, kid completion approvals, car care, Vacation Mode, up to 50 manually entered inventory items, and up to 10 appliance records.</p>
+              </details>
+              <details class="faq-item">
+                <summary>What does Huney Premium add?</summary>
+                <p>Premium adds multiple households and properties, Receipt Memory imports, unlimited inventory and appliance records, weather-aware seasonal preparation, calendar-aware travel prep, room reset plans, rental turnover, and emergency preparation.</p>
+              </details>
             </div>
           </div>
         </section>
 
         <section class="footer-cta" id="support">
-          <div class="footer-cta-inner">
+          <div class="footer-cta-inner reveal">
             <p class="eyebrow">Huney</p>
             <h2>Home runs better when the plan is shared.</h2>
             <p class="lead centered">
@@ -1375,6 +1729,23 @@
       </footer>
     </div>
     <script>
+      document.documentElement.classList.add("motion-ready");
+
+      const revealItems = document.querySelectorAll(".reveal");
+      if ("IntersectionObserver" in window) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          });
+        }, { threshold: 0.14, rootMargin: "0px 0px -6%" });
+
+        revealItems.forEach((item) => revealObserver.observe(item));
+      } else {
+        revealItems.forEach((item) => item.classList.add("is-visible"));
+      }
+
       const featuredAppScreen = document.querySelector("#featured-app-screen");
       const screenshotButtons = document.querySelectorAll(".screenshot-button");
 
@@ -1384,6 +1755,9 @@
 
           featuredAppScreen.src = button.dataset.screenSrc;
           featuredAppScreen.alt = button.dataset.screenAlt;
+          featuredAppScreen.classList.remove("screen-swapping");
+          void featuredAppScreen.offsetWidth;
+          featuredAppScreen.classList.add("screen-swapping");
           screenshotButtons.forEach((item) => item.removeAttribute("aria-current"));
           button.setAttribute("aria-current", "true");
         });

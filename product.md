@@ -1,6 +1,6 @@
 # Huney Product Facts
 
-Last updated: July 29, 2026
+Last updated: August 1, 2026
 
 ## Summary
 
@@ -30,6 +30,32 @@ Huney is a shared household management app for couples, families, roommates, and
 - Maintenance history
 - Shared weekly goals
 - Household sync
+
+## Regular Huney
+
+- Personalized setup for the home, people, pets, plants, and routines
+- Shared tasks, owners, rotations, reminders, snooze, and skip today
+- Household invites, cloud sync, shared completions, and kid completion approvals
+- Apple Calendar planning, busy-time awareness, and Vacation Mode
+- Weekly meal plans, recipes, grocery lists, leftovers, and cooking mode
+- Weekly goals, voting, points, progress, and completion history
+- Car care for oil changes, tires, registration, insurance, and washes
+- Up to 50 manually entered household inventory items
+- Up to 10 appliance records
+
+## Huney Premium
+
+Premium includes everything in Regular Huney and adds:
+
+- Separate plans and household codes for rentals, vacation homes, and family properties
+- Receipt Memory imports and unlimited household inventory
+- Unlimited appliance, filter, warranty, and service records
+- Weather-aware preparation for extreme heat, freezes, heavy rain, high winds, and snow
+- Calendar-aware travel preparation and smarter task timing
+- Focused room reset plans and seasonal care
+- Rental turnover routines and emergency preparation
+
+If a household returns to Regular Huney, existing records remain available, but new inventory and appliance records are subject to the Regular plan limits.
 
 ## Platform
 
