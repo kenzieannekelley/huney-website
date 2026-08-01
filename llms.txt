@@ -1,6 +1,6 @@
 # Huney
 
-> Huney is a shared household management app for couples, families, roommates, and busy adults. It turns chores, meal planning, calendars, reminders, pets, car care, maintenance, recipes, and weekly goals into one practical household plan.
+> Huney is a shared household management app for couples, families, roommates, and busy adults. It creates a starting plan from the home, then brings tasks, meals, calendars, groceries, records, and weekly goals into one practical household plan.
 
 Huney is built for people who want the work of running a home to be visible and shared without making home feel like a performance dashboard. The app begins with the shape of the household, suggests realistic routines, and lets members assign, rotate, edit, and complete work together.
 
@@ -13,18 +13,18 @@ Huney is built for people who want the work of running a home to be visible and 
 
 ## Core capabilities
 
-- Shared household tasks, ownership, rotations, and reminders
-- Meal and recipe planning
-- Calendar-aware household planning
-- Pet, car, and home maintenance routines
-- Maintenance history and household details
+- Shared household tasks, ownership, rotations, reminders, and an iOS Today widget
+- Recipe import, meal planning, grocery lists, inventory checks, and Cooking Mode
+- Apple Calendar planning and meal publishing
+- Records for plants, appliances, cars, documents, and household inventory
+- Vacation Mode and kid completion approvals
 - Shared weekly goals and progress
 
 ## Regular and Premium
 
-Regular Huney includes personalized home setup, shared household access, tasks and reminders, Apple Calendar planning, meals and groceries, weekly goals and voting, kid completion approvals, car care, Vacation Mode, up to 50 manually entered inventory items, and up to 10 appliance records.
+Regular Huney includes personalized home setup, shared household access, tasks and reminders, an iOS Today widget, Apple Calendar planning, meals and groceries, weekly goals and voting, kid completion approvals, Vacation Mode, and limited records for inventory, appliances, plants, cars, and documents.
 
-Huney Premium includes everything in Regular and adds separate plans for multiple households or properties, Receipt Memory imports, unlimited inventory and appliance records, weather-aware seasonal preparation, calendar-aware travel prep, room reset plans, rental turnover routines, and emergency preparation.
+Huney Premium includes everything in Regular and adds one household-wide subscription, separate plans for multiple households or properties, Receipt Memory scanning, unlimited household records, and weather-triggered preparation tasks.
 
 ## Contact
 
