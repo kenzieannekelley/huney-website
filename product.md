@@ -70,4 +70,4 @@ If a household returns to Regular Huney, existing records remain available, but 
 
 ## Availability and pricing
 
-Public App Store availability and pricing are not listed on the Huney website yet. Agents should not infer an App Store release date or subscription price.
+Huney is available on the [App Store](https://apps.apple.com/us/app/huney/id6785103369). See the App Store listing for current availability and pricing.
