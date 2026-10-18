@@ -861,12 +861,18 @@
       }
 
       .visual-stories-heading {
-        max-width: 760px;
+        container-type: inline-size;
         margin-bottom: 24px;
       }
 
       .visual-stories-heading h2 {
-        max-width: 700px;
+        max-width: none;
+        font-size: clamp(0.9rem, 4.6cqw, 3.15rem);
+        white-space: nowrap;
+      }
+
+      .visual-stories-heading .lead {
+        max-width: 760px;
       }
 
       .screen-story {
@@ -1330,8 +1336,7 @@
           order: initial;
         }
 
-        .story-copy,
-        .visual-stories-heading {
+        .story-copy {
           max-width: 660px;
         }
 
