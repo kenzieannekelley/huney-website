@@ -28,4 +28,4 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-Sitemap: https://huney.vercel.app/sitemap.xml
+Sitemap: https://www.huneyapp.com/sitemap.xml

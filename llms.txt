@@ -8,10 +8,10 @@ Huney is built for people who want the work of running a home to be visible and 
 
 - [Huney on the App Store](https://apps.apple.com/us/app/huney/id6785103369): Download Huney and see current availability and pricing.
 
-- [Huney home](https://huney.vercel.app/): Product overview, audience, features, screenshots, workflow, and frequently asked questions.
-- [Huney support](https://huney.vercel.app/support): Help with setup, tasks, calendars, recipes, shared households, and Premium.
-- [Huney privacy policy](https://huney.vercel.app/privacy): How Huney handles account, household, calendar, location, recipe, receipt, grocery, and support information.
-- [Product facts for agents](https://huney.vercel.app/product.md): A concise, machine-readable product summary.
+- [Huney home](https://www.huneyapp.com/): Product overview, audience, features, screenshots, workflow, and frequently asked questions.
+- [Huney support](https://www.huneyapp.com/support): Help with setup, tasks, calendars, recipes, shared households, and Premium.
+- [Huney privacy policy](https://www.huneyapp.com/privacy): How Huney handles account, household, calendar, location, recipe, receipt, grocery, and support information.
+- [Product facts for agents](https://www.huneyapp.com/product.md): A concise, machine-readable product summary.
 
 ## Core capabilities
 

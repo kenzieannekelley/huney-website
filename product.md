@@ -1,6 +1,6 @@
 # Huney Product Facts
 
-Last updated: August 1, 2026
+Last updated: October 21, 2026
 
 ## Summary
 
@@ -63,9 +63,9 @@ If a household returns to Regular Huney, existing records remain available, but 
 - Product type: Mobile application
 - Operating system: iOS
 - Category: Household management and lifestyle
-- Website: https://huney.vercel.app/
-- Support: https://huney.vercel.app/support
-- Privacy: https://huney.vercel.app/privacy
+- Website: https://www.huneyapp.com/
+- Support: https://www.huneyapp.com/support
+- Privacy: https://www.huneyapp.com/privacy
 - Support email: huney.support@gmail.com
 
 ## Availability and pricing
